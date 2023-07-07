@@ -1,38 +1,51 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     margin-top: 20px;
     padding: 0;
     font-family: sans-serif;
+    max-width: 1440px;
+    line-height: 1.25rem;
 }
 
 h1, h2, h3 {
     color: #0A0A95;
 }
 /* header */
+
 .container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  position: relative; 
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
   
 .rectangle1 {
+    margin: 0 auto;
     background-image: linear-gradient(180deg, #0A0A95, #00003B);
     width: 80%;
     height: 180px;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     border-radius: 7px;
+    position: relative; 
+    z-index: 0;
 }
 
+
 .rectangle2 {
-    background-image: linear-gradient(25deg, white, lightgrey);
-    position: absolute;
-    left: 15%;
-    top: 45px;
-    width: 70%;
-    height: 160px;
-    z-index: 1;
-    clip-path: polygon(0 17%, 100% 0, 100% 100%, 0 80%);
-    border-radius: 7px;
+  margin: 0 auto;
+  background-image: linear-gradient(25deg, white, lightgrey);
+  position: absolute;
+  left: auto;
+  top: 20px;
+  width: 70%;
+  height: 160px;
+  z-index: 1;
+  clip-path: polygon(0 17%, 100% 0, 100% 100%, 0 80%);
+  border-radius: 7px;
+}
+
+h1 {
+    margin-top: 35px;
 }
 
 .content {
@@ -45,6 +58,10 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem 15% 0 15%;    
+}
+
+.mb {
+    margin-bottom: 7px;
 }
 
 .skewt {
@@ -66,9 +83,14 @@ h1, h2, h3 {
     border-radius: 20px;
 }
 
-.exp {
-    margin-left: 2rem;
-    line-height: 1em;
+.exp > hr {
+    width:25%;
+    margin: 30px auto;
+    border: 5px solid ligh-grey;
+}
+
+.exp > h4 {
+    line-height: 1pt;
 }
 
 @media screen and (max-width: 600px) {
@@ -79,6 +101,11 @@ h1, h2, h3 {
         font-family: sans-serif;
     }
     
+    h1 {
+        line-height: 2rem;
+        margin-top: 10px;
+    }
+
     h1, h2, h3 {
         color: #0A0A95;
     }
@@ -119,7 +146,7 @@ h1, h2, h3 {
     .container2 {
         display: grid;
         grid-template-columns: 1fr;
-        margin: 1rem 0 0 0;    
+        margin: 2rem 0 0 0;    
     }
     
     .skewt {
